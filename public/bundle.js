@@ -564,6 +564,16 @@ const map = new mapboxgl.Map({
 });
 
 /*
+  * Get itinerary if it exists
+  */
+
+  if(location.hash){
+    fetch("/api/itineraries/"+location.hash.slice(1)).then(result => result.json(result)).then(console.log)
+  }
+
+
+
+/*
   * Populate the list of attractions
   */
 
